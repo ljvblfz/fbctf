@@ -48,7 +48,7 @@ set -e
 DB="fbctf"
 U="ctf"
 P="ctf"
-P_ROOT="root"
+P_ROOT=""
 
 # Default values
 MODE="dev"

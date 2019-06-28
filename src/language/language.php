@@ -31,8 +31,22 @@ function tr(string $word): string {
   /* HH_IGNORE_ERROR[2050] */
   if (array_key_exists($word, $lang)) {
     /* HH_IGNORE_ERROR[2050] */
+
+      error_log(
+        "\n[INFO] translate [".$word."] -> [".$lang[$word]."]",
+        3,
+        "/tmp/fbctf_translate_info.log"
+      );
+
     return $lang[$word];
   } else {
+
+      error_log(
+        "\n[WARN] [".$word."] has no translation in the selected language. Using the English version instead.",
+        3,
+        "/tmp/fbctf_translate_warn.log"
+      );
+
     error_log(
       "\nWarning: '{$word}' has no translation in the selected language. Using the English version instead.",
     );

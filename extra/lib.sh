@@ -234,7 +234,7 @@ function install_hhvm() {
   sudo DEBIAN_FRONTEND=noninteractive apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xB4112585D386EB94
 
   log "Adding HHVM repo"
-  sudo DEBIAN_FRONTEND=noninteractive add-apt-repository "deb http://dl.hhvm.com/ubuntu xenial-lts-3.21 main"
+  sudo DEBIAN_FRONTEND=noninteractive add-apt-repository "deb [arch=amd64] http://dl.hhvm.com/ubuntu trusty-lts-3.21 main"
 
   package_repo_update
   package hhvm

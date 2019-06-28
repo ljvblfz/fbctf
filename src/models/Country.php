@@ -298,6 +298,13 @@ class Country extends Model {
       '-'.must_have_idx($row, 'iso_code'),
       $language,
     );
+
+    error_log(
+      "\n[INFO] language [".$language."]"."country name [".$translate_name."]",
+      3,
+      "/tmp/fbctf_country_info.log"
+    );
+
     return new Country(
       intval(must_have_idx($row, 'id')),
       must_have_idx($row, 'iso_code'),

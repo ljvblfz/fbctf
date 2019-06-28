@@ -1212,6 +1212,9 @@ module.exports = {
       }
       if (!$(this).hasClass('not_configuration')) {
         changeConfiguration(field, value);
+        if (field === 'registration_type') {
+          location.reload();
+        }
       }
     });
 
